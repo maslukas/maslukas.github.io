@@ -65,13 +65,17 @@
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         input[type="password"] {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         button {
             background: #00848c;
@@ -80,6 +84,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: block;
+            margin: 10px auto 0;
         }
         button:hover {
             background: #037272;
@@ -93,7 +99,7 @@
         function checkPassword() {
             var password = document.getElementById("password").value;
             var encodedInput = encodePassword(password);
-            const storedEncoded = "UEFLVEpJUDIwMjU="; // Base64 dari "PAKTJIP2025"
+            const storedEncoded = "UEFLVEpJUDIwMjU="; 
             
             if (encodedInput === storedEncoded) {
                 document.querySelector(".password-container").style.display = "none";
